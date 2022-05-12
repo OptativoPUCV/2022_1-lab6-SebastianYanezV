@@ -45,16 +45,17 @@ void print_node(Node* n){
 
 int is_valid(Node* n)
 {
-  int *arreglo = (int*) calloc(10, sizeof(int));
   int i, j, cont;
 
   for (i = 0 ; i < 9 ; i++)
   {
+    int *arreglo = (int*) calloc(10, sizeof(int));
+
     for (j = 0 ; j < 9 ; j++)
     {
       cont = n->sudo[i][j];
       if (arreglo[cont] == 0) arreglo[cont] = 1;
-      //if (arreglo[cont] == 1) return 0;
+      else return 0;
     }
   }
 
