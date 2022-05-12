@@ -75,10 +75,12 @@ int is_valid(Node* n)
       int a = 3 * (k/3) + (p/3);
       int b = 3 * (k%3) + (p%3);
 
-      if (n->sudo[a][b] != 0)
+      numero = n->sudo[a][b];
+
+      if (arreglo[numero] == 0) arreglo[numero] = 1;
+      else
       {
-        if (arreglo[n->sudo[a][b]] == 1) return 0;
-        else arreglo[n->sudo[a][b]] = 1;
+        if (arreglo[numero] == 1) return 0;
       }
     }
   }
