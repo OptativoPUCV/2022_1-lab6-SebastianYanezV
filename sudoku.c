@@ -45,8 +45,25 @@ void print_node(Node* n){
 
 int is_valid(Node* n)
 {
-  int *arreglo;
-  int i, j, k, p;
+  int *arregloFilaCol;
+  int *arregloSubMatriz;
+  int i, j, k, p, numero;
+
+  for (i = 0 ; i < 9 ; i++)
+  {
+    arregloFilaCol = (int*) calloc(10, sizeof(int));
+
+    for (j = 0 ; j < 9 ; j++)
+    {
+      numero = n->sudo[i][j];
+      
+      if (arregloFilaCol[numero] == 0) arregloFilaCol[numero] = 1;
+      else
+      {
+        if (arregloFilaCol[numero] == 1) return 0;
+      }
+    }
+  }
 
   for (i = 0 ; i < 9 ; i++)
   {
@@ -54,7 +71,7 @@ int is_valid(Node* n)
     {
       for (k = 0 ; k < 9 ; k++)
       {
-        arreglo = (int*) calloc(10, sizeof(int));
+        arregloSubMatriz = (int*) calloc(10, sizeof(int));
 
         for(p = 0 ; p < 9 ; p++)
         {
@@ -63,8 +80,8 @@ int is_valid(Node* n)
 
           if (n->sudo[a][b] != 0)
           {
-            if (arreglo[n->sudo[a][b]] == 1) return 0;
-            else arreglo[n->sudo[a][b]] = 1;
+            if (arregloSubMatriz[n->sudo[a][b]] == 1) return 0;
+            else arregloSubMatriz[n->sudo[a][b]] = 1;
           }
         }
       }
