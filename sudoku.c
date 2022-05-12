@@ -53,7 +53,7 @@ int is_valid(Node* n)
     for (j = 0 ; j < 9 ; j++)
     {
       cont = n->sudo[i][j];
-      if (arreglo[cont] == 0) arreglo[cont] == 1;
+      if (arreglo[cont] == 0) arreglo[cont] = 1;
       if (arreglo[cont] == 1) return 0;
     }
   }
