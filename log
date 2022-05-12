@@ -172,3 +172,19 @@ Thu May 12 19:22:41 -04 2022:
  tests:  5|3
 total_score: 35/70
 961ce1f
+Thu May 12 19:23:19 -04 2022: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+./sudoku.c:50:16: error: unused variable 'p' [-Werror,-Wunused-variable]
+  int i, j, k, p, numero;
+               ^
+./sudoku.c:49:8: error: unused variable 'arreglo2' [-Werror,-Wunused-variable]
+  int *arreglo2;
+       ^
+./sudoku.c:50:13: error: unused variable 'k' [-Werror,-Wunused-variable]
+  int i, j, k, p, numero;
+            ^
+3 errors generated.
+Compilation failed
+ded766a

@@ -56,7 +56,7 @@ int is_valid(Node* n)
     for (j = 0 ; j < 9 ; j++)
     {
       if (n->sudo[i][j] == 0) continue;
-      
+
       numero = n->sudo[i][j];
       
       if (arreglo[numero] == 0) arreglo[numero] = 1;
@@ -65,7 +65,7 @@ int is_valid(Node* n)
         if (arreglo[numero] == 1) return 0;
       }
 
-      for (k = 0 ; k < 9 ; k++)
+      /*for (k = 0 ; k < 9 ; k++)
       {
         arreglo2 = (int*) calloc(10, sizeof(int));
 
@@ -80,7 +80,7 @@ int is_valid(Node* n)
             else arreglo2[n->sudo[a][b]] = 1;
           }
         }
-      }
+      }*/
     }
   }
 
