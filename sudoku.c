@@ -56,12 +56,12 @@ List* get_adj_nodes(Node* n)
   int i, j;
   int cont;
 
-  for (i = 0 ; i < 9 ; i++)
+  for (i = 0 ; i < 3 ; i++)
   {
-    for (j = 0 ; j < 9 ; j++)
+    for (j = 0 ; j < 3 ; j++)
     {
       cont = 1;
-      
+
       if (n->sudo[i][j] == 0)
       {
         Node *nodo = createNode();
