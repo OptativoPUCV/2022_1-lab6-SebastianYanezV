@@ -46,17 +46,28 @@ void print_node(Node* n){
 int is_valid(Node* n)
 {
   int *arreglo;
-  int i, j, numero;
+  int i, j, k, p, numero;
 
   for (i = 0 ; i < 9 ; i++)
   {
-    arreglo = (int*) calloc(10, sizeof(int));
-
     for (j = 0 ; j < 9 ; j++)
     {
-      numero = n->sudo[i][j];
-      if (arreglo[numero] == 1) return 0;
-      if (arreglo[numero] == 0) arreglo[numero] = 1;
+      for (k = 0 ; k < 9 ; k++)
+      {
+        arreglo = (int*) calloc(10, sizeof(int));
+
+        for(p = 0 ; p < 9 ; p++)
+        {
+          int a = 3 * (k/3) + (p/3);
+          int b = 3 * (k%3) + (p%3);
+
+          if (n->sudo[a][b] != 0)
+          {
+            if (arreglo[n->sudo[a][b]] == 1) return 0;
+            else arreglo[n->sudo[a][b]] = 1;
+          }
+        }
+      }
     }
   }
 

@@ -114,3 +114,13 @@ Thu May 12 17:53:01 -04 2022:
  tests:  2|4
 total_score: 15/70
 98946d7
+Thu May 12 18:57:37 -04 2022: 
+ sudoku.c | 21 ++++++++++++++++-----
+ 1 file changed, 16 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+./sudoku.c:49:19: error: unused variable 'numero' [-Werror,-Wunused-variable]
+  int i, j, k, p, numero;
+                  ^
+1 error generated.
+Compilation failed
+1e894e3
