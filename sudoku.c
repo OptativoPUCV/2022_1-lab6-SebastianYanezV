@@ -64,6 +64,7 @@ int is_valid(Node* n)
   {
     printf("%d ", arreglo[i]);
   }
+  printf("\n");
 
 
   return 1;
