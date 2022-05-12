@@ -54,7 +54,7 @@ int is_valid(Node* n)
     {
       cont = n->sudo[i][j];
       if (arreglo[cont] == 0) arreglo[cont] = 1;
-      if (arreglo[cont] == 1) return 0;
+      //if (arreglo[cont] == 1) return 0;
     }
   }
 
