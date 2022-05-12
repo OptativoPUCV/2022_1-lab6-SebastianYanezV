@@ -58,10 +58,10 @@ List* get_adj_nodes(Node* n)
 
   for (i = 0 ; i < 9 ; i++)
   {
-    cont = 1;
-
     for (j = 0 ; j < 9 ; j++)
     {
+      cont = 1;
+      
       if (n->sudo[i][j] == 0)
       {
         Node *nodo = createNode();
