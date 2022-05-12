@@ -34,3 +34,17 @@ Thu May 12 17:16:45 -04 2022:
  tests:  2|4
 total_score: 15/70
 b7c3495
+Thu May 12 17:33:53 -04 2022: 
+ sudoku.c | 15 ++++++++++++++-
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+./sudoku.c:56:45: error: equality comparison result unused [-Werror,-Wunused-comparison]
+      if (arreglo[cont] == 0) arreglo[cont] == 1;
+                              ~~~~~~~~~~~~~~^~~~
+./sudoku.c:56:45: note: use '=' to turn this equality comparison into an assignment
+      if (arreglo[cont] == 0) arreglo[cont] == 1;
+                                            ^~
+                                            =
+1 error generated.
+Compilation failed
+f7387fe
