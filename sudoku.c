@@ -45,8 +45,9 @@ void print_node(Node* n){
 
 int is_valid(Node* n)
 {
-  int *arreglo = (int*) calloc(10, sizeof(int));
-  /*int i, j, cont;
+  int *arreglo;
+  int i, j, cont;
+  int valido = 1;
 
   for (i = 0 ; i < 9 ; i++)
   {
@@ -56,18 +57,12 @@ int is_valid(Node* n)
     {
       cont = n->sudo[i][j];
       if (arreglo[cont] == 0) arreglo[cont] = 1;
-      else return 0;
+      else valido = 0;
     }
-  }*/
-
-  for (int i = 0 ; i < 10 ; i++)
-  {
-    printf("%d ", arreglo[i]);
   }
-  printf("\n");
 
-
-  return 1;
+  if (valido == 1) return 1;
+  else return 0;
 }
 
 
