@@ -61,6 +61,14 @@ int is_valid(Node* n)
       {
         if (arreglo[numero] == 1) return 0;
       }
+
+      numero = n->sudo[j][i];
+      
+      if (arreglo[numero] == 0) arreglo[numero] = 1;
+      else
+      {
+        if (arreglo[numero] == 1) return 0;
+      }
     }
   }
 
