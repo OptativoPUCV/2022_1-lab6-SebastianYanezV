@@ -47,7 +47,6 @@ int is_valid(Node* n)
 {
   int *arreglo;
   int i, j, cont;
-  int valido = 1;
 
   for (i = 0 ; i < 9 ; i++)
   {
@@ -57,12 +56,10 @@ int is_valid(Node* n)
     {
       cont = n->sudo[i][j];
       if (arreglo[cont] == 0) arreglo[cont] = 1;
-      else valido = 0;
     }
   }
 
-  if (valido == 1) return 1;
-  else return 0;
+  return 0;
 }
 
 
