@@ -66,7 +66,7 @@ int is_valid(Node* n)
     }
   }
 
-  for (int k = 0 ; k < 9 ; k++)
+  /*for (int k = 0 ; k < 9 ; k++)
   {
     arreglo = (int*) calloc(10, sizeof(int));
 
@@ -83,7 +83,7 @@ int is_valid(Node* n)
         if (arreglo[numero] == 1) return 0;
       }
     }
-  }
+  }*/
   return 1;
 }
 
