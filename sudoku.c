@@ -59,7 +59,7 @@ List* get_adj_nodes(Node* n)
   for (i = 0 ; i < 9 ; i++)
   {
     cont = 1;
-    
+
     for (j = 0 ; j < 9 ; j++)
     {
       if (n->sudo[i][j] == 0)
@@ -67,6 +67,7 @@ List* get_adj_nodes(Node* n)
         Node *nodo = createNode();
         nodo = copy(n);
         nodo->sudo[i][j] = cont;
+        pushBack(list, nodo);
         cont++;
       }
     }
