@@ -66,6 +66,24 @@ int is_valid(Node* n)
     }
   }
 
+  for (j = 0 ; i < 9 ; i++)
+  {
+    arreglo = (int*) calloc(10, sizeof(int));
+
+    for (i = 0 ; j < 9 ; j++)
+    {
+      if (n->sudo[i][j] == 0) continue;
+
+      numero = n->sudo[i][j];
+      
+      if (arreglo[numero] == 0) arreglo[numero] = 1;
+      else
+      {
+        if (arreglo[numero] == 1) return 0;
+      }
+    }
+  }
+
   for (k = 0 ; k < 9 ; k++)
   {
     arreglo = (int*) calloc(10, sizeof(int));
@@ -92,7 +110,7 @@ int is_valid(Node* n)
 
 List* get_adj_nodes(Node* n)
 {
-  List* list=createList();
+  List* list = createList();
 
   int i, j;
   int cont;
@@ -168,7 +186,6 @@ Node* DFS(Node* initial, int* cont)
     free(nodo);
     cont++;
   }
-
   return NULL;
 }
 
