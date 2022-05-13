@@ -64,31 +64,10 @@ int is_valid(Node* n)
       {
         if (arreglo[numero] == 1) return 0;
       }
-
-      for (k = 0 ; k < 9 ; k++)
-      {
-        arreglo2 = (int*) calloc(10, sizeof(int));
-
-        for (p = 0 ; p < 9 ; p++)
-        {   
-          int a = 3 * (k/3) + (p/3);
-          int b = 3 * (k%3) + (p%3);
-
-          if (n->sudo[a][b] == 0) continue;
-
-          numero = n->sudo[a][b];
-
-          if (arreglo2[numero] == 0) arreglo2[numero] = 1;
-          else
-          {
-            if (arreglo2[numero] == 1) return 0;
-          }
-        }
-      }
     }
   }
 
-  /*for (k = 0 ; k < 9 ; k++)
+  for (k = 0 ; k < 9 ; k++)
   {
     arreglo2 = (int*) calloc(10, sizeof(int));
 
@@ -107,7 +86,7 @@ int is_valid(Node* n)
         if (arreglo2[numero] == 1) return 0;
       }
     }
-  }*/
+  }
   return 1;
 }
 
