@@ -123,31 +123,37 @@ List* get_adj_nodes(Node* n)
 
 int is_final(Node* n)
 {
-  /*Stack *pila = createStack();
-  push(pila, n);
+  return 0;
+}
 
-  int tamanyoPila = get_size(pila);
+Node* DFS(Node* initial, int* cont)
+{
+  /*Stack *S = createStack();
+  push(S, initial);
 
-  while (tamanyoPila != 0)
+  int largoS = get_size(S);
+
+  while (largoS != 0)
   {
-    Node *nodo = top(pila);
-    pop(pila);
+    Node *nodo = top(S);
+    pop(S);
+
+    if (is_final(nodo) == 1) return nodo;
 
     List *nodosAdj = get_adj_nodes(nodo);
     Node *aux = first(nodosAdj);
 
     while (aux != NULL)
     {
-      push(pila, aux);
+      push(S, aux);
       aux = next(nodosAdj);
     }
 
-    tamanyoPila = get_size(pila);
+    largoS = get_size(S);
+    free(nodo);
+    cont++;
   }*/
-  return 0;
-}
 
-Node* DFS(Node* initial, int* cont){
   return NULL;
 }
 
