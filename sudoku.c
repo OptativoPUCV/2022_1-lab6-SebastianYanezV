@@ -143,7 +143,7 @@ int is_final(Node* n)
 
 Node* DFS(Node* initial, int* cont)
 {
-  /*Stack *S = createStack();
+  Stack *S = createStack();
   push(S, initial);
 
   int largoS = get_size(S);
@@ -167,7 +167,7 @@ Node* DFS(Node* initial, int* cont)
     largoS = get_size(S);
     free(nodo);
     cont++;
-  }*/
+  }
 
   return NULL;
 }
