@@ -114,7 +114,6 @@ List* get_adj_nodes(Node* n)
           if (is_valid(nodo) == 1) pushBack(list, nodo);
           cont++;
         }
-
         return list;
       }
     }
@@ -125,7 +124,21 @@ List* get_adj_nodes(Node* n)
 
 int is_final(Node* n)
 {
-  return 0;
+  int i, j;
+  int final = 1;
+
+  for (i = 0 ; i < 9 ; i++)
+  {
+    for (j = 0 ; j < 9 ; j++)
+    {
+      if (n->sudo[i][j] == 0)
+      {
+        final = 0;
+        return final;
+      }
+    }
+  }
+  return final;
 }
 
 Node* DFS(Node* initial, int* cont)
