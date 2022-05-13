@@ -66,15 +66,15 @@ int is_valid(Node* n)
     }
   }
 
-  for (j = 0 ; i < 9 ; i++)
+  for (i = 0 ; i < 9 ; i++)
   {
     arreglo = (int*) calloc(10, sizeof(int));
 
-    for (i = 0 ; j < 9 ; j++)
+    for (j = 0 ; j < 9 ; j++)
     {
-      if (n->sudo[i][j] == 0) continue;
+      if (n->sudo[j][i] == 0) continue;
 
-      numero = n->sudo[i][j];
+      numero = n->sudo[j][i];
       
       if (arreglo[numero] == 0) arreglo[numero] = 1;
       else
