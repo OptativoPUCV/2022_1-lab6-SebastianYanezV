@@ -46,7 +46,6 @@ void print_node(Node* n){
 int is_valid(Node* n)
 {
   int *arreglo;
-  int *arreglo2;
   int i, j, k, p, numero;
 
   for (i = 0 ; i < 9 ; i++)
@@ -69,7 +68,7 @@ int is_valid(Node* n)
 
   for (k = 0 ; k < 9 ; k++)
   {
-    arreglo2 = (int*) calloc(10, sizeof(int));
+    arreglo = (int*) calloc(10, sizeof(int));
 
     for (p = 0 ; p < 9 ; p++)
     {   
@@ -80,10 +79,10 @@ int is_valid(Node* n)
 
       numero = n->sudo[a][b];
 
-      if (arreglo2[numero] == 0) arreglo2[numero] = 1;
+      if (arreglo[numero] == 0) arreglo[numero] = 1;
       else
       {
-        if (arreglo2[numero] == 1) return 0;
+        if (arreglo[numero] == 1) return 0;
       }
     }
   }
@@ -122,8 +121,30 @@ List* get_adj_nodes(Node* n)
 }
 
 
-int is_final(Node* n){
-    return 0;
+int is_final(Node* n)
+{
+  /*Stack *pila = createStack();
+  push(pila, n);
+
+  int tamanyoPila = get_size(pila);
+
+  while (tamanyoPila != 0)
+  {
+    Node *nodo = top(pila);
+    pop(pila);
+
+    List *nodosAdj = get_adj_nodes(nodo);
+    Node *aux = first(nodosAdj);
+
+    while (aux != NULL)
+    {
+      push(pila, aux);
+      aux = next(nodosAdj);
+    }
+
+    tamanyoPila = get_size(pila);
+  }*/
+  return 0;
 }
 
 Node* DFS(Node* initial, int* cont){
