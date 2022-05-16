@@ -184,7 +184,7 @@ Node* DFS(Node* initial, int* cont)
 
     largoS = get_size(S);
     free(nodo);
-    cont++;
+    (*cont)++;
   }
   return NULL;
 }
